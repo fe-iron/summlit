@@ -1,0 +1,42 @@
+body{
+    background-color: white;
+}
+
+#logo{
+    width: 97.68px;
+    box-sizing: border-box;
+    font-size: 40px;
+    color: rgb(8, 8, 9);
+    margin-left: 50px;
+
+    line-height: 28.8px;
+}
+
+#calypso-home{
+    height: 22.5px;
+    margin-left: 695px;
+    font-size: 28px;
+    color: rgb(8, 8, 9);
+    font-weight: 400;
+}
+
+#subscribe{
+    height: 22.5px;
+    margin-left: 35px;
+    font-size: 30px;
+    color: white;
+    display: inline-table;
+    background-color: #FF6584;
+    border-radius: 10px;
+    width: 191px;
+    padding-left: 30px
+
+}
+
+.class_subscribe{
+    position: absolute;
+    width: 191px;
+    height: 57px;
+
+    color: #FF6584;
+}
