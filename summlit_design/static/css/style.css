@@ -3,24 +3,21 @@ body{
 }
 
 #logo{
-    width: 97.68px;
-    box-sizing: border-box;
-    font-size: 40px;
-    color: rgb(8, 8, 9);
+    width: 190px;
     margin-left: 50px;
-
-    line-height: 28.8px;
 }
 
 #calypso-home{
+    font-family: 'Rubik', sans-serif;
     height: 22.5px;
-    margin-left: 695px;
+    margin-left: 590px;
     font-size: 28px;
     color: rgb(8, 8, 9);
     font-weight: 400;
 }
 
 #subscribe{
+    font-family: 'Rubik', sans-serif;
     height: 22.5px;
     margin-left: 35px;
     font-size: 30px;
@@ -29,7 +26,7 @@ body{
     background-color: #FF6584;
     border-radius: 10px;
     width: 191px;
-    padding-left: 30px
+    padding-left: 23px;
 
 }
 
@@ -39,4 +36,73 @@ body{
     height: 57px;
 
     color: #FF6584;
+}
+
+.bluebody {
+
+    height: 554px;
+    margin-left: 72px;
+    background-color: #536DFE;
+    margin-top: 48px;
+    border-radius: 36px;
+
+
+
+}
+
+#tagline {
+    font-family: 'Rubik', sans-serif;
+    color: #FFFFFF;
+    margin-top: 38px;
+    font-size: 49px;
+    line-height: 59px;
+
+}
+.tagline_body{
+    width: 581px;
+    height: 95.4px;
+}
+
+#tagline_upperline{
+    margin-left: 21px;
+}
+.download_file{
+    max-width: 19%;
+    height: 79px;
+    background-color: white;
+    border-radius: 20px;
+    margin-left: 56px;
+    margin-top: 85px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.download_file img{
+    margin-top: 12px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.01);
+}
+
+.filename{
+    font-family: 'Rubik', sans-serif;
+    display: inline;
+    color: #FF6584;
+    font-size: 22px;
+}
+
+.cloud_block{
+    max-width: 8%;
+    height: 79px;
+    margin-top: 85px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#circle-outer{
+    border-radius: 50%;
+    //background-color: rgba(74, 174, 226, 0.35);
+    transform: rotate(-3.99deg);
+}
+
+#circle-outer img{
+    margin-top: 22px;
+    margin-left: 14px;
 }

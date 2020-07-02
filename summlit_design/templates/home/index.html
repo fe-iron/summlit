@@ -11,12 +11,15 @@
 
     <title>Summlit</title>
       <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+
+
   </head>
   <body>
 
 <!--    navbar starts here-->
     <nav class="navbar navbar-expand-lg" style="margin-top: 26px;">
-      <span class="navbar-brand" id="logo">LOGO</span>
+      <span class="navbar-brand" ><img src="{% static 'images/summlit.png' %}" alt="logo" id="logo"></span>
 
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
@@ -29,6 +32,31 @@
     </nav>
 
 <!--    navbar ends here-->
+
+<!--    blue body starts here-->
+    <div class="container bluebody" style="max-width: 1216px;">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <div class="tagline_body"><p id="tagline"><span id="tagline_upperline">Summarizing Files Just</span><br>Became Easier then Ever!</p></div>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 download_file">
+                <img src="{% static 'images/icons/download_file.png' %}" alt="download icon">
+                <p class="filename">Meeting2.wav</p>
+            </div>
+            <div class="col-lg-6"></div>
+            <div class="col-lg-3 cloud_block">
+            <span id="circle-outer">
+                <img src="{% static 'images/icons/cloud.png' %}" alt="cloud icon">
+            </span>
+            </div>
+        </div>
+    </div>
+<!--    blue body ends here-->
 
 
     <!-- Optional JavaScript -->
