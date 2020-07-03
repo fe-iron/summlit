@@ -50,9 +50,36 @@
             </div>
             <div class="col-lg-6"></div>
             <div class="col-lg-3 cloud_block">
-            <span id="circle-outer">
-                <img src="{% static 'images/icons/cloud.png' %}" alt="cloud icon">
-            </span>
+                <div class="circle-outer"></div>
+                <div class="circle-inner"></div>
+                <img src="{% static 'images/icons/cloud.png' %}" alt="cloud icon" id="circle-outer">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 music_block">
+                <div class="circle-outer-music"></div>
+                <div class="circle-inner-music"></div>
+                <img src="{% static 'images/icons/music.png' %}" alt="cloud icon" id="music">
+            </div>
+            <div class="col-md-6">
+                <div id="dropdown">
+                    <div id="dropdown-inner">
+                        <p>Drag & drop file here to <br><span style="margin-left: 108px;">upload</span></p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-3 download_file1">
+                <img src="{% static 'images/icons/audio.png' %}" alt="cloud icon" >
+                <div id="bar-border">
+                    <div id="bar1"></div>
+                    <div id="bar2"></div>
+                    <div id="bar3"></div>
+                    <div id="bar4"></div>
+                    <div id="bar5"></div>
+
+                </div>
             </div>
         </div>
     </div>
