@@ -14,6 +14,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
 
 
+
   </head>
   <body>
 
@@ -65,7 +66,10 @@
             <div class="col-md-6">
                 <div id="dropdown">
                     <div id="dropdown-inner">
-                        <p>Drag & drop file here to <br><span style="margin-left: 108px;">upload</span></p>
+                        <p>Drag & drop file here to <br><span>upload</span></p>
+                        <div id="browse-button">
+                            <p>Browse File</p>
+                        </div>
                     </div>
                 </div>
 
@@ -80,6 +84,11 @@
                     <div id="bar5"></div>
 
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md circle-scroll">
+                <img src="{% static 'images/icons/arrow.png'%}" id="arrow" alt="arrow icon">
             </div>
         </div>
     </div>

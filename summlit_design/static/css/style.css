@@ -276,3 +276,46 @@ body{
     margin-left: 47px;
 
 }
+#dropdown-inner span{
+    margin-left: 111px;
+    position: absolute;
+    margin-top: -7px;
+}
+#browse-button{
+    position: absolute;
+    width: 166.5px;
+    height: 41.5px;
+    border: 2px solid #536DFE;
+    margin-top: 235px;
+    margin-left: 122px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#browse-button p{
+    position: absolute;
+    font-family: 'Rubik', sans-serif;
+    font-size: 21px;
+    box-sizing: border-box;
+    margin-left: 20px;
+    margin-top: 4px;
+    font-weight: 500;
+
+    color: #FF6584;
+}
+
+.circle-scroll{
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin-left: 1px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.60);
+    margin-top: 674px;
+}
+#arrow{
+    position: absolute;
+    height: 39px;
+    margin-left: -12px;
+    margin-top: 4px;
+}
