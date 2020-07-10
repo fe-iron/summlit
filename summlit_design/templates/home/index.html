@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
 
     <title>Summlit</title>
       <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -20,7 +20,7 @@
 
 <!--    navbar starts here-->
     <nav class="navbar navbar-expand-lg" style="margin-top: 26px;">
-      <span class="navbar-brand" ><img src="{% static 'images/summlit.png' %}" alt="logo" id="logo"></span>
+        <span class="navbar-brand" ><a href="/"><img src="{% static 'images/summlit.png' %}" alt="logo" id="logo"></a></span>
 
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
@@ -51,7 +51,22 @@
             </div>
             <div class="col-lg-6"></div>
             <div class="col-lg-3 cloud_block">
-                <div class="circle-outer"></div>
+                <div class="circle-outer">
+                    <svg width="63" height="63" viewBox="0 0 63 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="arc-circle">
+                        <g id="Group" filter="url(#filter0_d)">
+                            <path id="Vector" d="M29 50C42.8071 50 54 38.8071 54 25C54 11.1929 42.8071 0 29 0C15.1929 0 4 11.1929 4 25C4 38.8071 15.1929 50 29 50Z" fill="white"/>
+                        </g>
+                        <g id="arc">
+                        <g id="Group 1">
+                        <g id="arc_2">
+                        <path id="arc_3" d="M59.6 18.3C65.84 31.94 54.58 59.9661 29 55.7281" stroke="#4AAEE2" stroke-opacity="0.83" stroke-width="3"/>
+                        </g>
+                        </g>
+                        </g>
+                        </g>
+                    </svg>
+                </div>
                 <div class="circle-inner"></div>
                 <img src="{% static 'images/icons/cloud.png' %}" alt="cloud icon" id="circle-outer">
 
@@ -59,7 +74,22 @@
         </div>
         <div class="row">
             <div class="col-lg-3 music_block">
-                <div class="circle-outer-music"></div>
+                <div class="circle-outer-music">
+                    <svg width="63" height="63" viewBox="0 0 63 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="arc-circle">
+                        <g id="Group" filter="url(#filter0_d)">
+                            <path id="Vector" d="M29 50C42.8071 50 54 38.8071 54 25C54 11.1929 42.8071 0 29 0C15.1929 0 4 11.1929 4 25C4 38.8071 15.1929 50 29 50Z" fill="white"/>
+                        </g>
+                        <g id="arc">
+                        <g id="Group 1">
+                        <g id="arc_2">
+                        <path id="arc_3" d="M59.6 18.3C65.84 31.94 54.58 59.9661 29 55.7281" stroke="#4AAEE2" stroke-opacity="0.83" stroke-width="3"/>
+                        </g>
+                        </g>
+                        </g>
+                        </g>
+                    </svg>
+                </div>
                 <div class="circle-inner-music"></div>
                 <img src="{% static 'images/icons/music.png' %}" alt="cloud icon" id="music">
             </div>
@@ -82,6 +112,8 @@
                     <div id="bar3"></div>
                     <div id="bar4"></div>
                     <div id="bar5"></div>
+                    <div id="bar6"></div>
+<!--                    <div id="bar7"></div>-->
 
                 </div>
             </div>
@@ -129,5 +161,29 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script>
+       // audio();
+        function audio(){
+            var flag = 0;
+            if(flag == 0){
+                document.getElementById("bar-border").innerHTML = '<div id="bar1"></div>';
+                setTimeout(1);
+                document.getElementById("bar-border").innerHTML = '<div id="bar2"></div>';
+                setTimeout(1);
+                document.getElementById("bar-border").innerHTML = '<div id="bar3"></div>';
+                setTimeout(1);
+                document.getElementById("bar-border").innerHTML = '<div id="bar4"></div>';
+                setTimeout(1);
+                flag = 1;
+            }else{
+                document.getElementById("bar-border").innerHTML = '<div id="bar5"></div>';
+                setTimeout(10);
+                document.getElementById("bar-border").innerHTML = '<div id="bar6"></div>';
+                setTimeout(10);
+                document.getElementById("bar-border").innerHTML = '<div id="bar7"></div>';
+                flag = 0;
+            }
+        }
+    </script>
   </body>
 </html>

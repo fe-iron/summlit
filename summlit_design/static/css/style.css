@@ -3,31 +3,34 @@ body{
 }
 
 #logo{
-    width: 190px;
+    width: 240px;
     margin-left: 50px;
 }
 
 #calypso-home{
     font-family: 'Rubik', sans-serif;
     height: 22.5px;
-    margin-left: 590px;
-    font-size: 28px;
+    margin-left: 552px;
+    font-size: 26px;
     color: rgb(8, 8, 9);
     font-weight: 400;
 }
 
 #subscribe{
     font-family: 'Rubik', sans-serif;
-    height: 22.5px;
-    margin-left: 35px;
-    font-size: 30px;
+    height: 18px;
+    margin-left: 41px;
+    font-size: 26px;
     color: white;
     display: inline-table;
     background-color: #FF6584;
     border-radius: 10px;
-    width: 191px;
-    padding-left: 23px;
+    width: 183px;
+    padding-left: 31px;
 
+}
+#subscribe:hover{
+    background-color: #ff8099;
 }
 
 .class_subscribe{
@@ -75,7 +78,7 @@ body{
     height: 79px;
     background-color: white;
     border-radius: 20px;
-    margin-left: 56px;
+    margin-left: 50px;
     margin-top: 214px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -83,7 +86,7 @@ body{
 .download_file img{
     position: absolute;
     margin-top: 12px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.01);
+    //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.01);
 }
 
 .filename{
@@ -99,8 +102,9 @@ body{
 .cloud_block{
     position: absolute;
     max-width: 8%;
-    height: 79px;
-    margin-top: 215px;
+    height: 83px;
+    padding-left: 8px;
+    margin-top: 211px;
     margin-left: 1055px;
     background-color: white;
     border-radius: 20px;
@@ -110,11 +114,15 @@ body{
     position: absolute;
     background: lightblue;
     border-radius: 50%;
-    width: 65px;
-    height: 65px;
-    margin-left: 1px;
-    margin-top: 7px;
+    width: 72px;
+    height: 72px;
+    margin-left: 5px;
+    margin-top: 6px;
 
+}
+.circle-outer svg{
+    margin-top: 6px;
+    margin-left: 3px;
 }
 .circle-inner{
     position: absolute;
@@ -122,15 +130,15 @@ body{
     border-radius: 50%;
     width: 45px;
     height: 45px;
-    margin-left: 11px;
-    margin-top: 18px;
+    margin-left: 19px;
+    margin-top: 21px;
 
 }
 
 .cloud_block img{
     position: absolute;
-    margin-top: 26px;
-    margin-left: 17px;
+    margin-top: 28px;
+    margin-left: 25px;
     width: 33px;
 }
 
@@ -166,6 +174,7 @@ body{
     max-width: 8%;
     height: 79px;
     margin-top: 346px;
+    padding-left: 10px;
     margin-left: 218px;
     background-color: white;
     border-radius: 20px;
@@ -174,10 +183,15 @@ body{
     position: absolute;
     background: lightblue;
     border-radius: 50%;
-    width: 65px;
-    height: 65px;
-    margin-left: 1px;
-    margin-top: 7px;
+    width: 69px;
+    height: 69px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.circle-outer-music svg {
+    margin-top: 4px;
+    margin-left: 2px;
 }
 
 .circle-inner-music{
@@ -186,14 +200,14 @@ body{
     border-radius: 50%;
     width: 45px;
     height: 45px;
-    margin-left: 11px;
-    margin-top: 18px;
+    margin-left: 17px;
+    margin-top: 17px;
 }
 .music_block img{
     position: absolute;
     margin-top: 26px;
-    margin-left: 17px;
-    width: 33px;
+    margin-left: 24px;
+    width: 31px;
 }
 #bar-border{
     position: absolute;
@@ -245,6 +259,22 @@ body{
     margin-top: 6px;
     border: 4px solid #FF4268;
 }
+#bar6{
+    position: absolute;
+    width: 0px;
+    height: 29px;
+    margin-left: 85px;
+    margin-top: 6px;
+    border: 4px solid #FF4268;
+}
+#bar7{
+    position: absolute;
+    width: 0px;
+    height: 29px;
+    margin-left: 100px;
+    margin-top: 6px;
+    border: 4px solid #FF4268;
+}
 #dropdown{
     position: absolute;
     width: 433px;
@@ -285,11 +315,12 @@ body{
     position: absolute;
     width: 166.5px;
     height: 41.5px;
-    border: 2px solid #536DFE;
     margin-top: 235px;
     margin-left: 122px;
+    background-color: #FF6584;
     border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 }
 #browse-button p{
     position: absolute;
@@ -300,9 +331,13 @@ body{
     margin-top: 4px;
     font-weight: 500;
 
-    color: #FF6584;
+    color: #FFFFFF;
 }
+#browse-button p:hover{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #ff0033;
 
+}
 .circle-scroll{
     position: absolute;
     background: white;
@@ -315,12 +350,27 @@ body{
 }
 #arrow{
     position: absolute;
-    height: 32px;
-    margin-left: -8px;
-    margin-top: 8px;
+    height: 20px;
+    margin-left: -3px;
+    margin-top: 17px;
+    animation: arrow_animi 1s alternate infinite;
+    opacity: 50%;
 }
+
+#arrow:hover {
+    animation: arrow_animi 1s alternate infinite;
+}
+
+@keyframes arrow_animi{
+    from{
+    }
+    to{
+        transform: translate(0px, -18px);
+    }
+}
+
 .scroll{
-    font-weight: 500;
+    font-weight: 400;
     color: blue;
     position: absolute;
     margin-top: 12px;
@@ -384,6 +434,9 @@ form{
     margin-top: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.40);
 }
+#email-subscribe:hover{
+    background-color: #ff8099;
+}
 #email{
     font-family: 'Rubik', sans-serif;
     height: 50px;
@@ -399,7 +452,7 @@ form{
     margin-top: 927px;
     width: 100%;
     height: 471px;
-    margin-left: 24px;
+    margin-left: 1px;
 }
 .container-fluid{
     position: relative;
@@ -442,4 +495,34 @@ nav p{
     margin-left: 884px;
     margin-top: 14px;
     border: 1.5px solid #FFFFFF;
+}
+
+#arc-circle{
+    animation: outer-arc 1s linear  infinite ;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes outer-arc{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+#bar1, #bar2, #bar3, #bar4, #bar5, #bar6{
+    animation: bar-animation 0.2s infinite;
+    //transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes bar-animation{
+    from{
+
+    }
+    to{
+        transform: translate(15px, 0px);
+    }
 }
