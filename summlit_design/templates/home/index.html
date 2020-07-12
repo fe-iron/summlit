@@ -25,7 +25,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <span class="nav-item nav-link active" id="calypso-home">Calypso Home</span>
-          <span class="nav-item nav-link" id="subscribe">Subscribe</span>
+            <a href="#extra-tag"><span class="nav-item nav-link" id="subscribe">Subscribe</span></a>
 
 
         </div>
@@ -97,9 +97,14 @@
                 <div id="dropdown">
                     <div id="dropdown-inner">
                         <p>Drag & drop file here to <br><span>upload</span></p>
+                        <form action="upload" enctype="multipart/form-data">
+                            {% csrf_token %}
                         <div id="browse-button">
                             <p>Browse File</p>
+                            <input type="file" class="custom-file-input" id="customFile">
+
                         </div>
+                        </form>
                     </div>
                 </div>
 
@@ -113,30 +118,45 @@
                     <div id="bar4"></div>
                     <div id="bar5"></div>
                     <div id="bar6"></div>
-<!--                    <div id="bar7"></div>-->
+                    <div id="bar7"></div>
 
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md circle-scroll">
-                <img src="{% static 'images/icons/arrow.png'%}" id="arrow" alt="arrow icon"> <span class="scroll">Scroll</span>
-            </div>
+
+                <div class="col-md circle-scroll">
+
+                    <img src="{% static 'images/icons/arrow.png'%}" id="arrow" alt="arrow icon"><span class="scroll">Scroll</span>
+
+                </div>
+
         </div>
         <div class="row">
             <div class="col-md-6">
                 <p class="font"><span id="s-only">S</span><span class="after-s">ave Time Now With </span><br><span class="ummlit">ummlit</span></p>
                 <p id="extra-tag">Now get free unlimited access to summlit and<br> Summarize any audio/video file on the go! Lorem<br> ipsum dolor sit amet, ut ipsum quis, tempor auctor elit. </p>
 
-                <form method="post" action="">
+<!--                <form method="post" action="">-->
 
-					<div class="form-group mb-6">
-					    <input type="email" style="font-size: 1.5rem;" class="form-control" id="email" name="email" placeholder="Enter Your email">
-					</div>
-					<div class="form-group">
-                        <button type="submit" class="btn btn-block" id="email-subscribe">Subscribe</button>
-					</div>
-				</form>
+<!--					<div class="form-group mb-6">-->
+<!--					    <input type="email" style="font-size: 1.5rem;" class="form-control" id="email" name="email" placeholder="Enter Your email">-->
+<!--					</div>-->
+<!--					<div class="form-group">-->
+<!--                        <button type="submit" class="btn btn-block" id="email-subscribe">Subscribe</button>-->
+<!--					</div>-->
+<!--				</form>-->
+
+
+                <form method="post" action="" name="Emails for summlit">
+                    {% csrf_token %}
+                    <div class="form-group mb-6">
+                    <input type="email" style="font-size: 1.5rem;" class="form-control" id="email" name="email" placeholder="Enter Your email">
+                    </div>
+                    <div class="form-group">
+                    <button type="submit" name="submit" class="btn btn-block" id="email-subscribe">Subscribe</button>
+                    </div>
+                </form>
             </div>
             <div class="col-md-6">
                 <img src="{% static 'images/icons/Group.png' %}" alt="Group image" id="group">
@@ -148,7 +168,7 @@
 <!--    footer starts here-->
 <div class="container-fluid">
     <nav class="nav">
-      <p class="nav-link" >Product of Calypso <br>Development</p> <div class="hr-bar"></div>
+      <p class="nav-link">Product of Calypso <br>Development</p> <div class="hr-bar"></div>
       <p class="nav-link" style="margin-left: 127px;margin-top: 20px;">Term of Use</p> <div id="hr-bar2"></div>
       <p class="nav-link" style="margin-left: 127px;margin-top: 20px;">More Products</p> <div id="hr-bar3"></div>
       <p class="nav-link" style="margin-left: 149px;margin-top: 0px; line-height: 39px;">Contact: info@summlit.com <br>Phone: 123-456-789</p>
@@ -161,29 +181,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script>
-       // audio();
-        function audio(){
-            var flag = 0;
-            if(flag == 0){
-                document.getElementById("bar-border").innerHTML = '<div id="bar1"></div>';
-                setTimeout(1);
-                document.getElementById("bar-border").innerHTML = '<div id="bar2"></div>';
-                setTimeout(1);
-                document.getElementById("bar-border").innerHTML = '<div id="bar3"></div>';
-                setTimeout(1);
-                document.getElementById("bar-border").innerHTML = '<div id="bar4"></div>';
-                setTimeout(1);
-                flag = 1;
-            }else{
-                document.getElementById("bar-border").innerHTML = '<div id="bar5"></div>';
-                setTimeout(10);
-                document.getElementById("bar-border").innerHTML = '<div id="bar6"></div>';
-                setTimeout(10);
-                document.getElementById("bar-border").innerHTML = '<div id="bar7"></div>';
-                flag = 0;
-            }
-        }
-    </script>
+    <script src="{% static 'js/email-script.js' %}"></script>
+    <script src="{% static 'js/drag-and-drop.js' %}"></script>
   </body>
 </html>

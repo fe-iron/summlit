@@ -10,7 +10,7 @@ body{
 #calypso-home{
     font-family: 'Rubik', sans-serif;
     height: 22.5px;
-    margin-left: 552px;
+    margin-left: 545px;
     font-size: 26px;
     color: rgb(8, 8, 9);
     font-weight: 400;
@@ -44,7 +44,7 @@ body{
 .bluebody {
     position: relative;
     height: 554px;
-    margin-left: 72px;
+    margin-left: 66px;
     background-color: #536DFE;
     margin-top: 48px;
     border-radius: 36px;
@@ -233,6 +233,7 @@ body{
     height: 29px;
     margin-left: 25px;
     margin-top: 6px;
+    transition-delay: 1s;
     border: 4px solid #FF4268;
 }
 #bar3{
@@ -512,17 +513,56 @@ nav p{
     }
 }
 
-#bar1, #bar2, #bar3, #bar4, #bar5, #bar6{
-    animation: bar-animation 0.2s infinite;
-    //transform-origin: center;
+#bar1{
+    animation: border-animation 10s linear infinite;
+    animation-duration: 10s;
+
+    transform-box: fill-box;
+}
+#bar2{
+    animation: border-animation 10s linear infinite ;
+    animation-duration: 20s;
+
+    transform-box: fill-box;
+}
+#bar3{
+    animation: border-animation 10s linear infinite ;
+    animation-duration: 30s;
+
+    transform-box: fill-box;
+}
+#bar4{
+    animation: border-animation 10s linear infinite ;
+    animation-duration: 40s;
+
+    transform-box: fill-box;
+}
+#bar5{
+    animation: border-animation 10s linear infinite ;
+    animation-duration: 50s;
+
+    transform-box: fill-box;
+}
+#bar6{
+    animation: border-animation 10s linear infinite ;
+    animation-duration: 60s;
+
+    transform-box: fill-box;
+}
+#bar7{
+    animation: border-animation 10s linear infinite ;
+    animation-duration: 70s;
+
     transform-box: fill-box;
 }
 
-@keyframes bar-animation{
-    from{
 
+
+@keyframes border-animation{
+    from{
+        transform: rotateX(0deg);
     }
     to{
-        transform: translate(15px, 0px);
+        transform: rotateX(360deg);
     }
 }
