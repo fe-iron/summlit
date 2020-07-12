@@ -94,19 +94,19 @@
                 <img src="{% static 'images/icons/music.png' %}" alt="cloud icon" id="music">
             </div>
             <div class="col-md-6">
+
                 <div id="dropdown">
                     <div id="dropdown-inner">
                         <p>Drag & drop file here to <br><span>upload</span></p>
-                        <form action="upload" enctype="multipart/form-data">
-                            {% csrf_token %}
+
                         <div id="browse-button">
                             <p>Browse File</p>
                             <input type="file" class="custom-file-input" id="customFile">
 
                         </div>
-                        </form>
                     </div>
                 </div>
+
 
             </div>
             <div class="col-md-3 download_file1">
