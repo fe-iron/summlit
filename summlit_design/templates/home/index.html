@@ -8,11 +8,10 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
-
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css.map' %}" >
     <title>Summlit</title>
-      <link rel="stylesheet" href="{% static 'css/style.css' %}">
-      <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
 
 
   </head>
@@ -25,7 +24,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <span class="nav-item nav-link active" id="calypso-home">Calypso Home</span>
-            <a href="#extra-tag"><span class="nav-item nav-link" id="subscribe">Subscribe</span></a>
+            <a href="#extra-tag" style="text-decoration: none;"><button class="nav-item nav-link" id="subscribe">Subscribe</button></a>
 
 
         </div>
@@ -43,7 +42,6 @@
             </div>
             <div class="col-lg-3"></div>
         </div>
-
         <div class="row">
             <div class="col-lg-3 download_file">
                 <img src="{% static 'images/icons/download_file.png' %}" alt="download icon">
@@ -72,99 +70,107 @@
 
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-3 music_block">
-                <div class="circle-outer-music">
-                    <svg width="63" height="63" viewBox="0 0 63 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="arc-circle">
-                        <g id="Group" filter="url(#filter0_d)">
-                            <path id="Vector" d="M29 50C42.8071 50 54 38.8071 54 25C54 11.1929 42.8071 0 29 0C15.1929 0 4 11.1929 4 25C4 38.8071 15.1929 50 29 50Z" fill="white"/>
-                        </g>
-                        <g id="arc">
-                        <g id="Group 1">
-                        <g id="arc_2">
-                        <path id="arc_3" d="M59.6 18.3C65.84 31.94 54.58 59.9661 29 55.7281" stroke="#4AAEE2" stroke-opacity="0.83" stroke-width="3"/>
-                        </g>
-                        </g>
-                        </g>
-                        </g>
-                    </svg>
+        <div class="row ">
+
+                <div class="col-lg-3 music_block">
+                    <div class="circle-outer-music">
+                        <svg width="63" height="63" viewBox="0 0 63 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="arc-circle">
+                            <g id="Group" filter="url(#filter0_d)">
+                                <path id="Vector" d="M29 50C42.8071 50 54 38.8071 54 25C54 11.1929 42.8071 0 29 0C15.1929 0 4 11.1929 4 25C4 38.8071 15.1929 50 29 50Z" fill="white"/>
+                            </g>
+                            <g id="arc">
+                            <g id="Group 1">
+                            <g id="arc_2">
+                            <path id="arc_3" d="M59.6 18.3C65.84 31.94 54.58 59.9661 29 55.7281" stroke="#4AAEE2" stroke-opacity="0.83" stroke-width="3"/>
+                            </g>
+                            </g>
+                            </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="circle-inner-music"></div>
+                    <img src="{% static 'images/icons/music.png' %}" alt="cloud icon" id="music">
                 </div>
-                <div class="circle-inner-music"></div>
-                <img src="{% static 'images/icons/music.png' %}" alt="cloud icon" id="music">
-            </div>
-            <div class="col-md-6">
+                <div class="col-md-6">
 
-                <div id="dropdown">
-                    <div id="dropdown-inner">
-                        <p>Drag & drop file here to <br><span>upload</span></p>
+                    <div id="dropdown">
 
-                        <div id="browse-button">
-                            <p>Browse File</p>
-                            <input type="file" class="custom-file-input" id="customFile">
+                            <div id="dropdown-inner">
+                                <p id="dropdown-p">Drag & drop file here to <br><span id="dropdown-span">upload</span></p>
+<form action="/" method="post" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                <div id="browse-button">
 
-                        </div>
+                                        <label id="browse-button-p">Browse File</label>
+                                        <input type="file" class="custom-file-input" id="customFile" name="document" value="">
+
+
+                                </div>
+<!--                                <button class="btn btn-success" type="submit" name="submit">upload</button>-->
+                            </form>
+                                {% if url %}
+                                <a href="{{url}}">{{url}}</a>
+                                {% endif %}
+                            </div>
+
+                    </div>
+
+
+
+                </div>
+                <div class="col-md-3 download_file1">
+                    <img src="{% static 'images/icons/audio.png' %}" alt="cloud icon" >
+                    <div id="bar-border">
+                        <div id="bar1"></div>
+                        <div id="bar2"></div>
+                        <div id="bar3"></div>
+                        <div id="bar4"></div>
+                        <div id="bar5"></div>
+                        <div id="bar6"></div>
+                        <div id="bar7"></div>
+
                     </div>
                 </div>
 
-
-            </div>
-            <div class="col-md-3 download_file1">
-                <img src="{% static 'images/icons/audio.png' %}" alt="cloud icon" >
-                <div id="bar-border">
-                    <div id="bar1"></div>
-                    <div id="bar2"></div>
-                    <div id="bar3"></div>
-                    <div id="bar4"></div>
-                    <div id="bar5"></div>
-                    <div id="bar6"></div>
-                    <div id="bar7"></div>
-
-                </div>
-            </div>
         </div>
-        <div class="row">
 
-                <div class="col-md circle-scroll">
-
-                    <img src="{% static 'images/icons/arrow.png'%}" id="arrow" alt="arrow icon"><span class="scroll">Scroll</span>
-
-                </div>
-
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <p class="font"><span id="s-only">S</span><span class="after-s">ave Time Now With </span><br><span class="ummlit">ummlit</span></p>
-                <p id="extra-tag">Now get free unlimited access to summlit and<br> Summarize any audio/video file on the go! Lorem<br> ipsum dolor sit amet, ut ipsum quis, tempor auctor elit. </p>
-
-<!--                <form method="post" action="">-->
-
-<!--					<div class="form-group mb-6">-->
-<!--					    <input type="email" style="font-size: 1.5rem;" class="form-control" id="email" name="email" placeholder="Enter Your email">-->
-<!--					</div>-->
-<!--					<div class="form-group">-->
-<!--                        <button type="submit" class="btn btn-block" id="email-subscribe">Subscribe</button>-->
-<!--					</div>-->
-<!--				</form>-->
-
-
-                <form method="post" action="" name="Emails for summlit">
-                    {% csrf_token %}
-                    <div class="form-group mb-6">
-                    <input type="email" style="font-size: 1.5rem;" class="form-control" id="email" name="email" placeholder="Enter Your email">
-                    </div>
-                    <div class="form-group">
-                    <button type="submit" name="submit" class="btn btn-block" id="email-subscribe">Subscribe</button>
-                    </div>
-                </form>
-            </div>
-            <div class="col-md-6">
-                <img src="{% static 'images/icons/Group.png' %}" alt="Group image" id="group">
-            </div>
-        </div>
     </div>
 <!--    blue body ends here-->
+<!--    after below blue body-->
+    <div class="container" style="max-width: 1216px; position: relative;">
+        <div class="row">
 
+                        <div class="col-md circle-scroll">
+
+                            <img src="{% static 'images/icons/arrow.png'%}" id="arrow"  alt="arrow icon"><a href="#hr-bar2"><span class="scroll">Scroll</span></a>
+
+                        </div>
+
+                </div>
+        <div class="row">
+                    <div class="col-md-6">
+                        <p class="font"><span id="s-only">S</span><span class="after-s">ave Time Now With </span><br><span class="ummlit">ummlit</span></p>
+                        <p id="extra-tag">Now get free unlimited access to summlit and<br> Summarize any audio/video file on the go! Lorem<br> ipsum dolor sit amet, ut ipsum quis, tempor auctor elit. </p>
+
+
+
+                        <form method="post" action="" name="Emails for summlit" id="email-collector">
+                            {% csrf_token %}
+                            <div class="form-group mb-6">
+                            <input type="email" style="font-size: 1.5rem;" class="form-control" id="email" name="email" placeholder="Enter Your email">
+                            </div>
+                            <div class="form-group">
+                            <button type="submit" name="submit" class="btn btn-block" id="email-subscribe">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="{% static 'images/icons/Group.png' %}" alt="Group image" id="group">
+                    </div>
+                </div>
+    </div>
+<!--    after below blue body ends-->
 <!--    footer starts here-->
 <div class="container-fluid">
     <nav class="nav">
@@ -176,8 +182,16 @@
 </div>
 <!--    footer ends here-->
 
+
+
+
+
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>

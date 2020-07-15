@@ -18,16 +18,17 @@ body{
 
 #subscribe{
     font-family: 'Rubik', sans-serif;
-    height: 18px;
+    height: 51px;
     margin-left: 41px;
-    font-size: 26px;
+    font-size: 30px;
     color: white;
-    display: inline-table;
     background-color: #FF6584;
     border-radius: 10px;
-    width: 183px;
-    padding-left: 31px;
-
+    width: 180px;
+    padding-left: 12px;
+    border: 0px;
+    padding-top: 3px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.40);
 }
 #subscribe:hover{
     background-color: #ff8099;
@@ -105,7 +106,7 @@ body{
     height: 83px;
     padding-left: 8px;
     margin-top: 211px;
-    margin-left: 1055px;
+    margin-left: 1062px;
     background-color: white;
     border-radius: 20px;
 }
@@ -297,7 +298,7 @@ body{
     border: 2px dashed;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-#dropdown-inner p{
+#dropdown-p{
     position: absolute;
     font-family: 'Rubik', sans-serif;
     display: inline;
@@ -307,7 +308,7 @@ body{
     margin-left: 47px;
 
 }
-#dropdown-inner span{
+#dropdown-span{
     margin-left: 111px;
     position: absolute;
     margin-top: -7px;
@@ -323,18 +324,18 @@ body{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
-#browse-button p{
+#browse-button-p{
     position: absolute;
     font-family: 'Rubik', sans-serif;
     font-size: 21px;
     box-sizing: border-box;
-    margin-left: 20px;
+    margin-left: 26px;
     margin-top: 4px;
     font-weight: 500;
 
     color: #FFFFFF;
 }
-#browse-button p:hover{
+#browse-button-p:hover{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color: #ff0033;
 
@@ -347,7 +348,7 @@ body{
     height: 45px;
     margin-left: 1px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.60);
-    margin-top: 674px;
+    margin-top: 140px;
 }
 #arrow{
     position: absolute;
@@ -381,7 +382,7 @@ body{
     position: absolute;
     font-family: 'Rubik', sans-serif;
     font-size: 21px;
-    margin-top: 900px;
+    margin-top: 362px;
 }
 #s-only{
     position: absolute;
@@ -410,15 +411,15 @@ body{
 #extra-tag{
     position: absolute;
     color: rgba(0, 0, 0, 0.56);
-    margin-top: 1031px;
+    margin-top: 496px;
     margin-left: -19px;
     font-weight: 500;
     font-size: 22px;
     line-height: 26px;
 
 }
-form{
-    margin-top: 1250px;
+#email-collector{
+    margin-top: 700px;
     margin-left: -19px;
 }
 #email-subscribe{
@@ -450,14 +451,14 @@ form{
 }
 #group{
     position: absolute;
-    margin-top: 927px;
+    margin-top: 372px;
     width: 100%;
-    height: 471px;
+    height: 436px;
     margin-left: 1px;
 }
 .container-fluid{
     position: relative;
-    margin-top: 1000px;
+    margin-top: 110px;
     background-color: #747373;
     padding-top: 30px;
     padding-bottom: 15px;
@@ -515,25 +516,25 @@ nav p{
 
 #bar1{
     animation: border-animation 10s linear infinite;
-    animation-duration: 10s;
+    animation-duration: 70s;
 
     transform-box: fill-box;
 }
 #bar2{
     animation: border-animation 10s linear infinite ;
-    animation-duration: 20s;
+    animation-duration: 65s;
 
     transform-box: fill-box;
 }
 #bar3{
     animation: border-animation 10s linear infinite ;
-    animation-duration: 30s;
+    animation-duration: 60s;
 
     transform-box: fill-box;
 }
 #bar4{
     animation: border-animation 10s linear infinite ;
-    animation-duration: 40s;
+    animation-duration: 55s;
 
     transform-box: fill-box;
 }
@@ -545,13 +546,13 @@ nav p{
 }
 #bar6{
     animation: border-animation 10s linear infinite ;
-    animation-duration: 60s;
+    animation-duration: 50s;
 
     transform-box: fill-box;
 }
 #bar7{
     animation: border-animation 10s linear infinite ;
-    animation-duration: 70s;
+    animation-duration: 50s;
 
     transform-box: fill-box;
 }
@@ -560,9 +561,33 @@ nav p{
 
 @keyframes border-animation{
     from{
-        transform: rotateX(0deg);
+        transform: rotateY(0deg);
     }
     to{
-        transform: rotateX(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+#come-left{
+    animation: come-close-left 1s ease-in infinite;
+}
+#come-right{
+    animation: come-close-right 1s ease-in infinite;
+}
+
+@keyframes come-close-right{
+    to{
+        transform: translate(-292px, 53px);
+        z-index: -9;
+    }from{
+        transform: translate(0px, 0px);
+
+    }
+}
+@keyframes come-close-left{
+    to{
+        transform: translate(190px, 45px);
+    }from{
+        transform: translate(0px, 0px);
     }
 }

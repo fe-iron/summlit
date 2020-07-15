@@ -1,5 +1,5 @@
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzYQtzRYtrcht7wDjR6sLh9t5xKrVRIN6HFDUxE5ZsRCJl3ecM/exec'
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxgP7XMQU4mO-fw3rKQrkiaF9T7FDNEPbSFw1nUY5VNGYhFDmc/exec'
 const form = document.forms['Emails for summlit']
 
 form.addEventListener('submit', e => {
