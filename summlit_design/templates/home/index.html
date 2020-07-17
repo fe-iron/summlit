@@ -1,6 +1,6 @@
 {% load static %}
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
 
+        <script>(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);</script>
 
   </head>
   <body>
@@ -97,21 +98,23 @@
                     <div id="dropdown">
 
                             <div id="dropdown-inner">
-                                <p id="dropdown-p">Drag & drop file here to <br><span id="dropdown-span">upload</span></p>
-<form action="/" method="post" enctype="multipart/form-data">
+                                <p id="dropdown-p" class="box__dragndrop">Drag & drop file here to <br><span id="dropdown-span">upload</span></p>
+                                    <form action="" method="post" enctype="multipart/form-data" class="box">
                                         {% csrf_token %}
                                 <div id="browse-button">
 
                                         <label id="browse-button-p">Browse File</label>
-                                        <input type="file" class="custom-file-input" id="customFile" name="document" value="">
+                                        <input type="file" class="custom-file-input box__file" id="customFile" name="document" value="" data-multiple-caption="{count} files selected" multiple/>
 
 
                                 </div>
-<!--                                <button class="btn btn-success" type="submit" name="submit">upload</button>-->
-                            </form>
-                                {% if url %}
-                                <a href="{{url}}">{{url}}</a>
-                                {% endif %}
+                                  <div id="bar-fill"></div>
+                                  <div id="bar-fill-text"></div>
+<!--                                  <div class="box__error">Error! <span></span>.</div>-->
+                            <button class="box__button" type="submit">Upload</button>
+                                    </form>
+
+
                             </div>
 
                     </div>
@@ -192,10 +195,13 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script>
     </script>
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="{% static 'js/email-script.js' %}"></script>
+    <script src="{% static 'js/upload.js' %}"></script>
     <script src="{% static 'js/drag-and-drop.js' %}"></script>
   </body>
 </html>

@@ -295,7 +295,7 @@ body{
     border-radius: 12px;
     margin-top: 6px;
     margin-left: 6px;
-    border: 2px dashed;
+    border: 2px dashed #9da2a7;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 #dropdown-p{
@@ -574,7 +574,26 @@ nav p{
 #come-right{
     animation: come-close-right 1s ease-in infinite;
 }
-
+#come-left-download{
+    animation: come-close-left-download 1s ease-in infinite;
+}
+#come-right-cloud_block{
+    animation: come-close-right-cloud_block 1s ease-in infinite;
+}
+@keyframes come-close-left-download{
+    to{
+        transform: translate(353px, 181px);
+    }from{
+        transform: translate(0px, 0px);
+    }
+}
+@keyframes come-close-right-cloud_block{
+    to{
+        transform: translate(-341px, 183px);
+    }from{
+        transform: translate(0px, 0px);
+    }
+}
 @keyframes come-close-right{
     to{
         transform: translate(-292px, 53px);
@@ -590,4 +609,70 @@ nav p{
     }from{
         transform: translate(0px, 0px);
     }
+}
+
+#dropdown-inner-black{
+    position: absolute;
+    width: 422px;
+    height: 318px;
+    background-color: white;
+    border-radius: 12px;
+    margin-top: 6px;
+    margin-left: 6px;
+    border: 2px dashed #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#dropdown-after{
+    position: absolute;
+    width: 433px;
+    height: 331px;
+    background-color: white;
+    transition-delay: 1s;
+    border-radius: 12px;
+    margin-top: 187px;
+    animation: dropdown-animation 1s;
+    margin-left: 383px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+@keyframes  dropdown-animation{
+    to{
+        transform: translate(0px, -204px);
+    }
+}
+
+.display-none{
+    display: none;
+}
+//upload css
+.box__uploading,
+.box__success,
+.box__error {
+  display: none;
+}
+
+
+.box.has-advanced-upload {
+  background-color: white;
+  outline: 2px dashed black;
+  outline-offset: -10px;
+}
+.box.has-advanced-upload .box__dragndrop {
+  display: inline;
+}
+.box.is-dragover {
+  background-color: grey;
+}
+
+.box.is-uploading .box__input {
+  visibility: none;
+}
+.box.is-uploading .box__uploading {
+  display: block;
+}
+.box__button {
+  display: none;
+}
+.no-js .box__button {
+  display: block;
 }
