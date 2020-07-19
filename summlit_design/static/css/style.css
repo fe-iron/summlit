@@ -644,6 +644,18 @@ nav p{
 .display-none{
     display: none;
 }
+.uploaded-file{
+    position: absolute;
+    font-family: 'Rubik', sans-serif;
+    font-size: 21px;
+    box-sizing: border-box;
+    margin-left: 40px;
+    margin-top: -13px;
+    font-weight: 500;
+    color: black;
+}
+
+
 //upload css
 .box__uploading,
 .box__success,

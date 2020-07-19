@@ -23,8 +23,12 @@
     };
     dropZone.ondrop = function(e) {
         e.preventDefault();
-
-
+        console.log();
+        if(e.dataTransfer.files.length == 1){
+            $('.uploaded-file').html(e.dataTransfer.files[0]['name'] +' is uploading ...');
+        }else{
+            $('.uploaded-file').html(e.dataTransfer.files.length +" files uploading ...");
+        }
         $('.music_block').attr('class', 'display-none');
         $('.download_file1').attr('class', 'display-none');
         $('.cloud_block').attr('class', 'display-none');
@@ -34,6 +38,7 @@
         $('#dropdown-p').attr('id', '');
         $('.box__dragndrop').attr('class', 'display-none');
 
+        $('#browse-button').attr('class', "display-none");
         startUpload(e.dataTransfer.files);
     };
 
