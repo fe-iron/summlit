@@ -2,7 +2,7 @@
     "use strict";
     //drop functionality
     var dropZone = document.getElementById("dropdown-inner");
-    var barFill = document.getElementById("bar-fill");
+    var barFill = document.getElementById("my_canvas");
     var barFillText = document.getElementById("bar-fill-text");
 
     var startUpload = function(files){
@@ -13,11 +13,11 @@
             processor: 'upload',
 
             finished: function(data){
-                console.log(data);
+                //console.log(data);
             },
 
             error: function(){
-                console.log("there was an error");
+                console.log("There was an error");
             }
         });
     };
@@ -31,6 +31,9 @@
         $('.download_file').attr('class', 'display-none');
 
         $('#dropdown').attr('id', 'dropdown-after');
+        $('#dropdown-p').attr('id', '');
+        $('.box__dragndrop').attr('class', 'display-none');
+
         startUpload(e.dataTransfer.files);
     };
 

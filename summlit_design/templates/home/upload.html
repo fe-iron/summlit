@@ -13,7 +13,11 @@
     <title>Summlit | Upload</title>
       <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
-
+    <style>
+        #my_canvas{
+            border: 1px dashed #CCC;
+        }
+    </style>
 
   </head>
 <body>
@@ -34,8 +38,42 @@
 
 <!--    navbar ends here-->
 
+<canvas id="my_canvas" width="70" height="70"></canvas>
+
+<!--    after below blue body-->
+    <div class="container" style="max-width: 1216px; position: relative;">
+        <div class="row">
+
+                        <div class="col-md circle-scroll">
+
+                            <img src="{% static 'images/icons/arrow.png'%}" id="arrow"  alt="arrow icon"><a href="#hr-bar2"><span class="scroll">Scroll</span></a>
+
+                        </div>
+
+                </div>
+        <div class="row">
+                    <div class="col-md-6">
+                        <p class="font"><span id="s-only">S</span><span class="after-s">ave Time Now With </span><br><span class="ummlit">ummlit</span></p>
+                        <p id="extra-tag">Now get free unlimited access to summlit and<br> Summarize any audio/video file on the go! Lorem<br> ipsum dolor sit amet, ut ipsum quis, tempor auctor elit. </p>
 
 
+
+                        <form method="post" action="" name="Emails for summlit" id="email-collector">
+                            {% csrf_token %}
+                            <div class="form-group mb-6">
+                            <input type="email" style="font-size: 1.5rem;" class="form-control" id="email" name="email" placeholder="Enter Your email">
+                            </div>
+                            <div class="form-group">
+                            <button type="submit" name="submit" class="btn btn-block" id="email-subscribe">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="{% static 'images/icons/Group.png' %}" alt="Group image" id="group">
+                    </div>
+                </div>
+    </div>
+<!--    after below blue body ends-->
 
 
 
@@ -56,6 +94,32 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="{% static 'js/email-script.js' %}"></script>
-    <script src="{% static 'js/drag-and-drop.js' %}"></script>
+<script>
+    var ctx = document.getElementById("my_canvas").getContext('2d');
+    var al = 0;
+    var start = 4.72;
+    var cw = ctx.canvas.width;
+    var ch = ctx.canvas.height;
+    var diff;
+    function progressSim(){
+        diff = ((al / 100) * Math.PI*2*10).toFixed(2);
+        ctx.clearRect(0, 0, cw, ch);
+        ctx.lineWidth = 10;
+        ctx.fillStyle = '#09F';
+        ctx.strokeStyle = '#09F';
+        ctx.textAlign = 'center';
+        ctx.fillText(al+'%', cw*.5, ch*.5+2, cw);
+        ctx.beginPath();
+        ctx.arc(35, 35, 30, start, diff/10+start, false);
+        ctx.stroke();
+        if(al >= 100){
+            clearTimeout(sim);
+            //add your code here that will run when progress  completes
+        }
+        al++
+    }
+    var sim = setInterval(progressSim, 50);
+
+</script>
   </body>
 </html>

@@ -15,6 +15,13 @@
 
         <script>(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);</script>
 
+    <style>
+
+        .my-mx-5{
+            margin-left: 6.5rem!important;
+        }
+    </style>
+
   </head>
   <body>
 
@@ -98,21 +105,23 @@
                     <div id="dropdown">
 
                             <div id="dropdown-inner">
-                                <p id="dropdown-p" class="box__dragndrop">Drag & drop file here to <br><span id="dropdown-span">upload</span></p>
-                                    <form action="" method="post" enctype="multipart/form-data" class="box">
+                                <p id="dropdown-p" class="box__dragndrop">Drag & Drop file here to <br><span id="dropdown-span">upload</span></p>
+                                    <form action="upload" method="post" enctype="multipart/form-data">
                                         {% csrf_token %}
                                 <div id="browse-button">
 
                                         <label id="browse-button-p">Browse File</label>
-                                        <input type="file" class="custom-file-input box__file" id="customFile" name="document" value="" data-multiple-caption="{count} files selected" multiple/>
+                                        <input type="file" class="custom-file-input box__file" id="document" name="document" value="" multiple/>
 
 
                                 </div>
-                                  <div id="bar-fill"></div>
-                                  <div id="bar-fill-text"></div>
+                                  <canvas id="my_canvas" width="200" height="200" class="my-mx-5 my-4"></canvas>
+
+
+
 <!--                                  <div class="box__error">Error! <span></span>.</div>-->
-                            <button class="box__button" type="submit">Upload</button>
-                                    </form>
+                                    <button type="submit" name="submit" id="submit" class="display-none">Upload</button>
+                              </form>
 
 
                             </div>
@@ -161,7 +170,7 @@
                         <form method="post" action="" name="Emails for summlit" id="email-collector">
                             {% csrf_token %}
                             <div class="form-group mb-6">
-                            <input type="email" style="font-size: 1.5rem;" class="form-control" id="email" name="email" placeholder="Enter Your email">
+                            <input type="email" style="font-size: 1.5rem;" class="form-control" id="email" name="email" placeholder="Enter Your email" required>
                             </div>
                             <div class="form-group">
                             <button type="submit" name="submit" class="btn btn-block" id="email-subscribe">Subscribe</button>
@@ -200,6 +209,10 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+    </script>
     <script src="{% static 'js/email-script.js' %}"></script>
     <script src="{% static 'js/upload.js' %}"></script>
     <script src="{% static 'js/drag-and-drop.js' %}"></script>
