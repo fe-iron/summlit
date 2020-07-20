@@ -88,10 +88,8 @@ var app = app || {};
 
                 }
                 progressSim();
-
-
-
     };
+
     o.uploader = function(options) {
         o.options = options;
 

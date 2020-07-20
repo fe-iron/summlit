@@ -21,6 +21,16 @@
             }
         });
     };
+
+
+    //standard upload
+    document.getElementById('document').oninput = function(e){
+        var standardUploadFiles = document.getElementById('document').files;
+        e.preventDefault();
+
+        startUpload(standardUploadFiles);
+    };
+
     dropZone.ondrop = function(e) {
         e.preventDefault();
         console.log();
