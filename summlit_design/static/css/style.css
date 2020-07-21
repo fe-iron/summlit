@@ -1,38 +1,224 @@
+
+@media (min-width: 768px){
+    #logo{
+        width: 240px;
+        margin-left: 50px;
+    }
+
+    #calypso-home{
+        font-family: 'Rubik', sans-serif;
+        height: 22.5px;
+        margin-left: 545px;
+        font-size: 26px;
+        color: rgb(8, 8, 9);
+        font-weight: 400;
+    }
+
+    #subscribe{
+        font-family: 'Rubik', sans-serif;
+        height: 51px;
+        margin-left: 41px;
+        font-size: 30px;
+        color: white;
+        background-color: #FF6584;
+        border-radius: 10px;
+        width: 180px;
+        padding-left: 12px;
+        border: 0px;
+        padding-top: 3px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.40);
+    }
+    #subscribe:hover{
+        background-color: #ff8099;
+    }
+    .blue-body-width{
+        max-width: 1216px;
+    }
+
+    .bluebody {
+        position: relative;
+        height: 554px;
+        margin-left: 66px;
+        background-color: #536DFE;
+        margin-top: 48px;
+        border-radius: 36px;
+    }
+
+    #tagline {
+        font-family: 'Rubik', sans-serif;
+        color: #FFFFFF;
+        margin-top: 38px;
+        font-size: 49px;
+        line-height: 59px;
+        position: absolute;
+
+    }
+    #tagline_upperline{
+        margin-left: 21px;
+        position: absolute;
+    }
+    .download_file{
+        position: absolute;
+        max-width: 19%;
+        height: 79px;
+        background-color: white;
+        border-radius: 20px;
+        margin-left: 50px;
+        margin-top: 214px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .download_file img{
+        position: absolute;
+        margin-top: 12px;
+        //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.01);
+    }
+
+    .filename{
+        position: absolute;
+        font-family: 'Rubik', sans-serif;
+        display: inline;
+        color: #FF6584;
+        font-size: 22px;
+        margin-left: 57px;
+        margin-top: 24px;
+    }
+    .cloud_block{
+        position: absolute;
+        max-width: 8%;
+        height: 83px;
+        padding-left: 8px;
+        margin-top: 211px;
+        margin-left: 1062px;
+        background-color: white;
+        border-radius: 20px;
+    }
+
+    .circle-outer{
+        position: absolute;
+        background: lightblue;
+        border-radius: 50%;
+        width: 72px;
+        height: 72px;
+        margin-left: 5px;
+        margin-top: 6px;
+
+    }
+    .circle-outer svg{
+        margin-top: 6px;
+        margin-left: 3px;
+    }
+    .circle-inner{
+        position: absolute;
+        background: white;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        margin-left: 19px;
+        margin-top: 21px;
+
+    }
+
+
+
+}
+
+/* Portrait */
+@media (min-width: 180px) and (max-width: 767.98px) {
+    #logo{
+        width: 180px;
+        margin-left: 2px;
+    }
+    #subscribe{
+        font-family: 'Rubik', sans-serif;
+        height: 40px;
+        margin-left: 41px;
+        font-size: 25px;
+        color: white;
+        background-color: #FF6584;
+        border-radius: 10px;
+        width: 140px;
+        padding-left: 8px;
+        border: 0px;
+        padding-top: 2px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.40);
+    }
+    #subscribe:hover{
+        background-color: #ff8099;
+    }
+
+    .bluebody {
+        position: relative;
+        height: 554px;
+        margin-left: 17px;
+        background-color: #536DFE;
+        margin-top: 30px;
+        width: 340px;
+        border-radius: 36px;
+    }
+
+    #tagline {
+        font-family: 'Rubik', sans-serif;
+        color: #FFFFFF;
+        margin-top: 38px;
+        font-size: 22px;
+        line-height: 30px;
+        position: absolute;
+
+    }
+    #tagline_upperline {
+        margin-left: 12px;
+        position: absolute;
+    }
+    #tagline_upperline span{
+        margin-left: 3px;
+    }
+    .download_file {
+        position: absolute;
+        max-width: 76%;
+        height: 70px;
+        background-color: white;
+        border-radius: 20px;
+        margin-left: 35px;
+        margin-top: 126px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .download_file img{
+        position: absolute;
+        margin-top: 8px;
+    }
+
+    .filename {
+        position: absolute;
+        font-family: 'Rubik', sans-serif;
+        display: inline;
+        color: #FF6584;
+        font-size: 22px;
+        margin-left: 56px;
+        margin-top: 20px;
+    }
+    .cloud_block {
+        position: absolute;
+        max-width: 28%;
+        height: 75px;
+        padding-left: 0px;
+        margin-top: 226px;
+        margin-left: 10px;
+        background-color: white;
+        border-radius: 20px;
+    }
+
+}
+
+
+
+//normal CSS
 body{
     background-color: white;
 }
 
-#logo{
-    width: 240px;
-    margin-left: 50px;
-}
 
-#calypso-home{
-    font-family: 'Rubik', sans-serif;
-    height: 22.5px;
-    margin-left: 545px;
-    font-size: 26px;
-    color: rgb(8, 8, 9);
-    font-weight: 400;
-}
-
-#subscribe{
-    font-family: 'Rubik', sans-serif;
-    height: 51px;
-    margin-left: 41px;
-    font-size: 30px;
-    color: white;
-    background-color: #FF6584;
-    border-radius: 10px;
-    width: 180px;
-    padding-left: 12px;
-    border: 0px;
-    padding-top: 3px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.40);
-}
-#subscribe:hover{
-    background-color: #ff8099;
-}
 
 .class_subscribe{
     position: absolute;
@@ -42,99 +228,15 @@ body{
     color: #FF6584;
 }
 
-.bluebody {
-    position: relative;
-    height: 554px;
-    margin-left: 66px;
-    background-color: #536DFE;
-    margin-top: 48px;
-    border-radius: 36px;
 
-
-
-}
-
-#tagline {
-    font-family: 'Rubik', sans-serif;
-    color: #FFFFFF;
-    margin-top: 38px;
-    font-size: 49px;
-    line-height: 59px;
-    position: absolute;
-
-}
 .tagline_body{
     width: 581px;
     height: 95.4px;
     position: absolute;
 }
 
-#tagline_upperline{
-    margin-left: 21px;
-    position: absolute;
-}
-.download_file{
-    position: absolute;
-    max-width: 19%;
-    height: 79px;
-    background-color: white;
-    border-radius: 20px;
-    margin-left: 50px;
-    margin-top: 214px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
 
-.download_file img{
-    position: absolute;
-    margin-top: 12px;
-    //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.01);
-}
 
-.filename{
-    position: absolute;
-    font-family: 'Rubik', sans-serif;
-    display: inline;
-    color: #FF6584;
-    font-size: 22px;
-    margin-left: 57px;
-    margin-top: 24px;
-}
-
-.cloud_block{
-    position: absolute;
-    max-width: 8%;
-    height: 83px;
-    padding-left: 8px;
-    margin-top: 211px;
-    margin-left: 1062px;
-    background-color: white;
-    border-radius: 20px;
-}
-
-.circle-outer{
-    position: absolute;
-    background: lightblue;
-    border-radius: 50%;
-    width: 72px;
-    height: 72px;
-    margin-left: 5px;
-    margin-top: 6px;
-
-}
-.circle-outer svg{
-    margin-top: 6px;
-    margin-left: 3px;
-}
-.circle-inner{
-    position: absolute;
-    background: white;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    margin-left: 19px;
-    margin-top: 21px;
-
-}
 
 .cloud_block img{
     position: absolute;
@@ -143,7 +245,7 @@ body{
     width: 33px;
 }
 
-}
+
 #music{
     position: absolute;
     margin-top: 23px;
@@ -293,8 +395,8 @@ body{
     height: 318px;
     background-color: white;
     border-radius: 12px;
-    margin-top: 394px;
-    margin-left: 388px;
+    margin-top: 7px;
+    margin-left: 5px;
     border: 2px dashed #9da2a7;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -305,8 +407,8 @@ body{
     width: 500px;
     color: #FF6584;
     font-size: 30px;
-    margin-top: 430px;
-    margin-left: 435px;
+    margin-top: 30px;
+    margin-left: 48px;
 
 }
 #dropdown-span{
@@ -318,8 +420,8 @@ body{
     position: absolute;
     width: 166.5px;
     height: 41.5px;
-    margin-top: 630px;
-    margin-left: 513px;
+    margin-top: 224px;
+    margin-left: 123px;
     background-color: #FF6584;
     border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -656,36 +758,13 @@ nav p{
     color: black;
 }
 
-
-//upload css
-.box__uploading,
-.box__success,
-.box__error {
-  display: none;
-}
+//Media queries
 
 
-.box.has-advanced-upload {
-  background-color: white;
-  outline: 2px dashed black;
-  outline-offset: -10px;
-}
-.box.has-advanced-upload .box__dragndrop {
-  display: inline;
-}
-.box.is-dragover {
-  background-color: grey;
-}
 
-.box.is-uploading .box__input {
-  visibility: none;
-}
-.box.is-uploading .box__uploading {
-  display: block;
-}
-.box__button {
-  display: none;
-}
-.no-js .box__button {
-  display: block;
-}
+
+
+
+
+
+

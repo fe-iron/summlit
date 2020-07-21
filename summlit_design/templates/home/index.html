@@ -1,6 +1,6 @@
 {% load static %}
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css.map' %}" >
     <title>Summlit</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
 
-        <script>(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);</script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
 
     <style>
 
@@ -27,12 +27,12 @@
 
 <!--    navbar starts here-->
     <nav class="navbar navbar-expand-lg" style="margin-top: 26px;">
-        <span class="navbar-brand" ><a href="/"><img src="{% static 'images/summlit.png' %}" alt="logo" id="logo"></a></span>
+        <span><a href="/"><img src="{% static 'images/summlit.png' %}" alt="logo" id="logo" class="logo"></a></span>
 
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <span class="nav-item nav-link active" id="calypso-home">Calypso Home</span>
-            <a href="#extra-tag" style="text-decoration: none;"><button class="nav-item nav-link" id="subscribe">Subscribe</button></a>
+            <a href="#extra-tag" style="text-decoration: none;"><button class="nav-item nav-link subscribe" id="subscribe">Subscribe</button></a>
 
 
         </div>
@@ -46,12 +46,13 @@
         <div class="row">
             <div class="col-lg-3"></div>
             <div class="col-lg-6">
-                <div class="tagline_body"><p id="tagline"><span id="tagline_upperline">Summarizing Files Just</span><br>Became Easier then Ever!</p></div>
+                <div class="tagline_body"><p id="tagline"><span id="tagline_upperline">Summarizing Files Just</span><br><span>Became Easier then Ever!</span></p></div>
             </div>
             <div class="col-lg-3"></div>
         </div>
         <div class="row">
             <div class="col-lg-3 download_file">
+
                 <img src="{% static 'images/icons/download_file.png' %}" alt="download icon">
                 <p class="filename">Meeting2.wav</p>
             </div>

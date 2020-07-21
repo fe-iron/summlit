@@ -19,8 +19,6 @@ var app = app || {};
                 if(this.status === 200){
 //                    console.log(this.response);
 
-
-
                 } else{
                     if(typeof o.options.error === 'function'){
                         o.options.error();
@@ -31,7 +29,7 @@ var app = app || {};
 
         xmlhttp.upload.addEventListener('progress', function(e){
             var percent;
-//            console.log(e);
+            console.log(e+"progress computable");
             if(e.lengthComputable === true){
                 percent = Math.round((event.loaded / event.total) * 100);
                 setProgress(percent);
@@ -46,6 +44,7 @@ var app = app || {};
     getFormData = function(source) {
         var formData = new FormData();
         var i;
+        console.log("under getFormData");
         for(i=0; i<source.length; i=i+1){
             formData.append('files[]',source[i]);
 
@@ -56,7 +55,7 @@ var app = app || {};
     };
 
     setProgress = function(value) {
-//        if(o.options.progressBar !== undefined){
+        if(o.options.progressBar !== undefined){
 //            if(value){
 //                o.options.progressBar.style.width = value + '%'
 //            } else{
@@ -88,6 +87,7 @@ var app = app || {};
 
                 }
                 progressSim();
+         }
     };
 
     o.uploader = function(options) {

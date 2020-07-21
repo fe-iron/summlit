@@ -27,13 +27,30 @@
     document.getElementById('document').oninput = function(e){
         var standardUploadFiles = document.getElementById('document').files;
         e.preventDefault();
+//        console.log(standardUploadFiles)
+        //show file length
+        if(standardUploadFiles.length == 1){
+            $('.uploaded-file').html(standardUploadFiles[0]['name'] +' is uploading ...');
+        }else{
+            $('.uploaded-file').html(standardUploadFiles.length +" files uploading ...");
+        }
+        //remove tags before showing circle animation
+        $('.music_block').attr('class', 'display-none');
+        $('.download_file1').attr('class', 'display-none');
+        $('.cloud_block').attr('class', 'display-none');
+        $('.download_file').attr('class', 'display-none');
 
+        $('#dropdown').attr('id', 'dropdown-after');
+        $('#dropdown-p').attr('id', '');
+        $('.box__dragndrop').attr('class', 'display-none');
+
+        $('#browse-button').attr('class', "display-none");
         startUpload(standardUploadFiles);
     };
 
     dropZone.ondrop = function(e) {
         e.preventDefault();
-        console.log();
+//        console.log("under on drop");
         if(e.dataTransfer.files.length == 1){
             $('.uploaded-file').html(e.dataTransfer.files[0]['name'] +' is uploading ...');
         }else{
