@@ -383,6 +383,30 @@
         margin-top: 14px;
         border: 1.5px solid #FFFFFF;
     }
+    #dropdown-inner-black{
+        position: absolute;
+        width: 422px;
+        height: 318px;
+        background-color: white;
+        border-radius: 12px;
+        margin-top: 6px;
+        margin-left: 6px;
+        border: 2px dashed #000000;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    #dropdown-after{
+        position: absolute;
+        width: 433px;
+        height: 331px;
+        background-color: white;
+        transition-delay: 1s;
+        border-radius: 12px;
+        margin-top: 187px;
+        animation: dropdown-animation 1s;
+        margin-left: 383px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
 
 
 
@@ -395,8 +419,11 @@
 
 
 
+
+
+
 /* Portrait */
-@media (min-width: 180px) and (max-width: 767.98px) {
+@media (min-width: 180px) and (max-width: 375px) {
     #logo{
         width: 180px;
         margin-left: 2px;
@@ -722,7 +749,7 @@
     #group{
         position: absolute;
         margin-top: 76px;
-        width: 339px;
+        width: 325px;
         height: 436px;
         margin-left: 1px;
     }
@@ -781,7 +808,45 @@
         margin-top: 257px;
         border: 1.5px solid #FFFFFF;
     }
+    #dropdown-inner-black{
+        position: absolute;
+        width: 330px;
+        height: 261px;
+        background-color: white;
+        border-radius: 12px;
+        margin-top: 345px;
+        margin-left: -10px;
+        border: 2px dashed #000000;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
 
+    #dropdown-after{
+        position: absolute;
+        width: 330px;
+        height: 261px;
+        background-color: white;
+        transition-delay: 1s;
+        border-radius: 12px;
+        margin-top: 204px;
+        animation: dropdown-animation 1s;
+        margin-left: -10px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .canvas-custom{
+        height: 125px;
+        width: 125px;
+        margin-left: 93px !important;
+    }
+    .uploaded-file {
+        position: absolute;
+        font-family: 'Rubik', sans-serif;
+        font-size: 21px;
+        box-sizing: border-box;
+        margin-left: 50px;
+        margin-top: 7px;
+        font-weight: 500;
+        color: black;
+    }
 
 
 }
@@ -1022,30 +1087,7 @@ body{
     }
 }
 
-#dropdown-inner-black{
-    position: absolute;
-    width: 422px;
-    height: 318px;
-    background-color: white;
-    border-radius: 12px;
-    margin-top: 6px;
-    margin-left: 6px;
-    border: 2px dashed #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
 
-#dropdown-after{
-    position: absolute;
-    width: 433px;
-    height: 331px;
-    background-color: white;
-    transition-delay: 1s;
-    border-radius: 12px;
-    margin-top: 187px;
-    animation: dropdown-animation 1s;
-    margin-left: 383px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
 @keyframes  dropdown-animation{
     to{
         transform: translate(0px, -204px);

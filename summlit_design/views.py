@@ -14,8 +14,9 @@ def upload(request):
 
     # ret = {}
     # if upload_file:
-        items = request.FILES
-        print(items['files[]'])
+        items = request.FILES['files[]']
+
+        print(uploaded_dict.from_dict())
         # for file in items:
         #     print(file)
 
