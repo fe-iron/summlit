@@ -1,4 +1,4 @@
-{% load static %}
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css.map' %}" >
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/bootstrap.min.css.map" >
     <title>Summlit</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="css/style.css">
 
 
     <style>
@@ -27,7 +27,7 @@
 
 <!--    navbar starts here-->
     <nav class="navbar navbar-expand-lg" style="margin-top: 26px;">
-        <span><a href="/"><img src="{% static 'images/summlit.png' %}" alt="logo" id="logo" class="logo"></a></span>
+        <span><a href="/"><img src="images/summlit.png" alt="logo" id="logo" class="logo"></a></span>
 
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
@@ -53,7 +53,7 @@
         <div class="row">
             <div class="col-lg-3 download_file">
 
-                <img src="{% static 'images/icons/download_file.png' %}" alt="download icon">
+                <img src="images/icons/download_file.png" alt="download icon">
                 <p class="filename">Meeting2.wav</p>
             </div>
             <div class="col-lg-6"></div>
@@ -75,7 +75,7 @@
                     </svg>
                 </div>
                 <div class="circle-inner"></div>
-                <img src="{% static 'images/icons/cloud.png' %}" alt="cloud icon" id="circle-outer">
+                <img src="images/icons/cloud.png" alt="cloud icon" id="circle-outer">
 
             </div>
         </div>
@@ -99,7 +99,7 @@
                         </svg>
                     </div>
                     <div class="circle-inner-music"></div>
-                    <img src="{% static 'images/icons/music.png' %}" alt="cloud icon" id="music">
+                    <img src="images/icons/music.png" alt="cloud icon" id="music">
                 </div>
                 <div class="col-md-6">
 
@@ -108,11 +108,11 @@
                             <div id="dropdown-inner">
                                 <p id="dropdown-p" class="box__dragndrop">Drag & Drop file here to <br><span id="dropdown-span">upload</span></p>
                                     <form action="upload" method="post" enctype="multipart/form-data">
-                                        {% csrf_token %}
+
                                 <div id="browse-button">
 
                                         <label id="browse-button-p">Browse File</label>
-                                        <input type="file" class="custom-file-input box__file" id="document" name="document" value=""/>
+                                        <input type="file" class="custom-file-input box__file" id="document" name="document" value="" multiple/>
 
 
                                 </div>
@@ -133,7 +133,7 @@
 
                 </div>
                 <div class="col-md-3 download_file1">
-                    <img src="{% static 'images/icons/audio.png' %}" alt="cloud icon" >
+                    <img src="images/icons/audio.png" alt="cloud icon" >
                     <div id="bar-border" class="bar-margin-top">
                         <div id="bar1"></div>
                         <div id="bar2"></div>
@@ -156,7 +156,7 @@
 
                         <div class="col-md circle-scroll">
 
-                            <img src="{% static 'images/icons/arrow.png'%}" id="arrow"  alt="arrow icon"><a href="#hr-bar2"><span class="scroll">Scroll</span></a>
+                            <img src="images/icons/arrow.png" id="arrow"  alt="arrow icon"><a href="#hr-bar2"><span class="scroll">Scroll</span></a>
 
                         </div>
 
@@ -169,7 +169,7 @@
 
 
                         <form method="post" action="" name="Emails for summlit" id="email-collector">
-                            {% csrf_token %}
+
                             <div class="form-group mb-6">
                             <input type="email" style="font-size: 1.5rem;" class="form-control" id="email" name="email" placeholder="Enter Your email" required>
                             </div>
@@ -179,7 +179,7 @@
                         </form>
                     </div>
                     <div class="col-md-6">
-                        <img src="{% static 'images/icons/Group.png' %}" alt="Group image" id="group">
+                        <img src="images/icons/Group.png" alt="Group image" id="group">
                     </div>
                 </div>
     </div>
@@ -214,28 +214,8 @@
     <script type="text/javascript">
 
     </script>
-    <script src="{% static 'js/email-script.js' %}"></script>
-    <script src="{% static 'js/upload.js' %}"></script>
-    <script src="{% static 'js/drag-and-drop.js' %}"></script>
-  </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <script src="js/email-script.js"></script>
+    <script src="js/upload.js"></script>
+    <script src="js/drag-and-drop.js"></script>
+  </body>  
+<html>

@@ -14,9 +14,15 @@ def upload(request):
 
     # ret = {}
     # if upload_file:
+    #     items = request.FILES['files[]']
+    #     print(items)
+    #     print(request.user)
         items = request.FILES['files[]']
+        items = items.size
+        print(items)
+        # for line in items.chunks():
+        #     print(line)
 
-        print(uploaded_dict.from_dict())
         # for file in items:
         #     print(file)
 
